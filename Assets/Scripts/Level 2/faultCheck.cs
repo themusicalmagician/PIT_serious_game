@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boxCheck : MonoBehaviour
+public class faultCheck : MonoBehaviour
 {
     [SerializeField] private int boxNumber;
     [SerializeField] private scoreSO score;
@@ -13,6 +13,11 @@ public class boxCheck : MonoBehaviour
         {
             Destroy(collision.gameObject);
             score.addScore(1);
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+            score.subtractScore(1);
         }
     }
 }

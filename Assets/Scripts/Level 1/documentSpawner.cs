@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class documentSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject[] documents;
+    [SerializeField] private float spawnRate = 2f;
+    [SerializeField] private bool canSpawn = true;
+    Vector3 spawnpos;
+
     void Start()
     {
-        
+        StartCoroutine(Spawner());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Spawner()
     {
-        
+        WaitForSeconds wait = new WaitForSeconds(spawnRate);
+
+        while (canSpawn)
+        {
+             yield return wait;
+            int rand = Random.Range(0, documents.Length);
+            GameObject documentToSpawn = documents[rand];
+
+            spawnpos.x = 0f;
+            spawnpos.y = 3f;
+            spawnpos.z = 0f;
+
+
+            Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
+        }
     }
 }
