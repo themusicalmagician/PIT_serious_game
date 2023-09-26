@@ -14,20 +14,20 @@ public class scoreSO : ScriptableObject
     public void scoreSet()
     {
         currentScore = 0;
-        scoreSetup.Invoke(maxScore);
-        onScoreChange.Invoke(0);
+        scoreSetup?.Invoke(maxScore);
+        onScoreChange?.Invoke(0);
     }
 
     public void addScore(int Score)
     {
         currentScore += Score;
-        onScoreChange.Invoke(currentScore);
+        onScoreChange?.Invoke(currentScore);
     }
 
     public void subtractScore(int Score)
     {
         currentScore -= Score;
-        onScoreChange.Invoke(currentScore);
+        onScoreChange?.Invoke(currentScore);
     }
 
 
