@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class winScreen : MonoBehaviour
+public class Level1button : MonoBehaviour
 {
     public void mainMenu()
     {
@@ -15,7 +15,6 @@ public class winScreen : MonoBehaviour
         Application.Quit();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

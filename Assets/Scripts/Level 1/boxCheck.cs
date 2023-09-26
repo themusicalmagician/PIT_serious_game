@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class boxCheck : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class boxCheck : MonoBehaviour
         {
             score.addScore(1);
             Destroy(collision.gameObject);
+            if(score.currentScore == score.maxScore)
+            {
+                SceneManager.LoadScene("WinScreen");
+            }
         }
     }
 }

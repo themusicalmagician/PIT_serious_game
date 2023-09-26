@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class faultCheck : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class faultCheck : MonoBehaviour
         {
             Destroy(collision.gameObject);
             score.addScore(1);
+            if (score.currentScore == score.maxScore)
+            {
+                SceneManager.LoadScene("WinScreen");
+            }
         }
         else
         {
