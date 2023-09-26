@@ -11,8 +11,8 @@ public class boxCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(boxNumber.ToString()))
         {
-            Destroy(collision.gameObject);
             score.addScore(1);
+            Destroy(collision.gameObject);
         }
     }
 }
