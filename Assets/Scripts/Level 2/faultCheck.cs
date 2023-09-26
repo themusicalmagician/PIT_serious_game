@@ -6,23 +6,24 @@ using UnityEngine.SceneManagement;
 public class faultCheck : MonoBehaviour
 {
     [SerializeField] private int boxNumber;
-    [SerializeField] private scoreSO score;
+    [SerializeField] private Score score;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(boxNumber.ToString()))
         {
+            Score.currentScore++;
             Destroy(collision.gameObject);
-            score.addScore(1);
-            if (score.currentScore == score.maxScore)
+            if (Score.currentScore == Score.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
             }
+
         }
         else
         {
+            Score.currentScore--;
             Destroy(collision.gameObject);
-            score.subtractScore(1);
         }
     }
 }

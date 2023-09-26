@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 2
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 1942565940}
 --- !u!1 &165178037
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 3
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 1942565940}
 --- !u!1 &647956882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 1
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 1942565940}
 --- !u!1 &1554270443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fc469ad8c232744bc4ce63e770fec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1719046123}
 --- !u!114 &1554270449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1181,7 @@ GameObject:
   - component: {fileID: 1719046124}
   - component: {fileID: 1719046123}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: scoreLVL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1489,7 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 4
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 1942565940}
 --- !u!1 &1942565938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,10 +1530,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942565938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3cf4484e251f3428f533a105704a70, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e71eef10b447d245be735fe36efee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  scoreText: {fileID: 1719046123}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

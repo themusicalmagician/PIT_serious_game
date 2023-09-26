@@ -6,18 +6,19 @@ using UnityEngine.SceneManagement;
 public class boxCheck : MonoBehaviour
 {
     [SerializeField] private int boxNumber;
-    [SerializeField] private scoreSO score;
+    [SerializeField] private Score score;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(boxNumber.ToString()))
         {
-            score.addScore(1);
+            Score.currentScore++;
             Destroy(collision.gameObject);
-            if(score.currentScore == score.maxScore)
+            if (Score.currentScore == Score.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
             }
+
         }
     }
 }

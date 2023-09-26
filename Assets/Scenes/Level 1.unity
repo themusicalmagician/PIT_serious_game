@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 3
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 975297896}
 --- !u!1 &843355636
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,10 +711,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 975297894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3cf4484e251f3428f533a105704a70, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e71eef10b447d245be735fe36efee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  scoreText: {fileID: 1419654145}
 --- !u!1 &1117199888
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 1
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 975297896}
 --- !u!1 &1251455331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 4
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 975297896}
 --- !u!1 &1388074639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1419654145}
+  points: 
 --- !u!114 &1388074645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,7 +1357,7 @@ GameObject:
   - component: {fileID: 1419654146}
   - component: {fileID: 1419654145}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ScoreTextLVL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1698,7 +1699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNumber: 2
-  score: {fileID: 11400000, guid: 3fce6180e67da264f98396d29b82f705, type: 2}
+  score: {fileID: 975297896}
 --- !u!1 &1894516813
 GameObject:
   m_ObjectHideFlags: 0
