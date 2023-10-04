@@ -11,7 +11,7 @@ public class AchievementManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CreateAchievement("General", "Prestatie ontgrendeld", "Test titel", "Dit is de beschrijving");
+        //CreateAchievement("General", "Prestatie ontgrendeld", "Test titel", "Dit is de beschrijving");
     }
 
     // Update is called once per frame
@@ -34,5 +34,10 @@ public class AchievementManager : MonoBehaviour
         achievement.transform.GetChild(0).GetComponent<Text>().text = unlocked;
         achievement.transform.GetChild(1).GetComponent<Text>().text = title;
         achievement.transform.GetChild(2).GetComponent<Text>().text = description;
+    }
+
+    public void ChangeCategorty(GameObject button)
+    {
+        AchievementButton achievementButton = button.GetComponent<AchievementButton>();
     }
 }
