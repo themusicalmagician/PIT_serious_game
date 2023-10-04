@@ -17,6 +17,10 @@ public class AchievementManager : MonoBehaviour
         activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
         CreateAchievement("General", "Prestatie ontgrendeld", "Test titel", "Dit is de beschrijving");
 
+        foreach(GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
+        {
+            achievmentList.SetActive(false);
+        }
 
         activeButton.Click(); 
     }
