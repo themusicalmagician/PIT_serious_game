@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AchievementButton : MonoBehaviour
 {
-    [SerializeField] private GameObject achievementList;
+    public GameObject achievementList;
     public Sprite neutral, highlight;
 
     private Image sprite;

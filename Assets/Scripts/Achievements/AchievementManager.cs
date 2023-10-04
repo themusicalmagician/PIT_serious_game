@@ -7,11 +7,18 @@ public class AchievementManager : MonoBehaviour
 {
     [SerializeField] private GameObject achievementPrefab;
 
+    private AchievementButton activeButton;
+    public ScrollRect scrollRect; 
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //CreateAchievement("General", "Prestatie ontgrendeld", "Test titel", "Dit is de beschrijving");
+        activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
+        CreateAchievement("General", "Prestatie ontgrendeld", "Test titel", "Dit is de beschrijving");
+
+
+        activeButton.Click(); 
     }
 
     // Update is called once per frame
@@ -39,5 +46,12 @@ public class AchievementManager : MonoBehaviour
     public void ChangeCategorty(GameObject button)
     {
         AchievementButton achievementButton = button.GetComponent<AchievementButton>();
+
+        scrollRect.content = achievementButton.achievementList.GetComponent<RectTransform>();
+
+        achievementButton.Click();
+        activeButton.Click();
+        activeButton = achievementButton;
+
     }
 }
