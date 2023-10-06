@@ -3912,6 +3912,7 @@ MonoBehaviour:
   scrollRect: {fileID: 1154602631}
   achievementMenu: {fileID: 2088519919}
   visualAchievement: {fileID: 8548819122947268591, guid: 4df212eb2bddb7041bff812879713d9e, type: 3}
+  unlockedSprite: {fileID: 21300000, guid: 54ffe97bc9abf9e4493ef4c69ecad900, type: 3}
 --- !u!4 &2044468660
 Transform:
   m_ObjectHideFlags: 0

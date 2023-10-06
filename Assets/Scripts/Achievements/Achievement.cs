@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Achievement
 {
@@ -42,6 +43,8 @@ public class Achievement
     {
         if (!Unlocked)
         {
+
+            achievementRef.GetComponent<Image>().sprite = AchievementManager.Instance.unlockedSprite;
             Unlocked = true;
             return true;
         }
