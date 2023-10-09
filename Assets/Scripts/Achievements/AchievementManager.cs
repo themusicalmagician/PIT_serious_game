@@ -19,6 +19,8 @@ public class AchievementManager : MonoBehaviour
 
     public Sprite unlockedSprite;
 
+    public Text textPoints;
+
     private static AchievementManager instance;
 
     public static AchievementManager Instance 
@@ -38,11 +40,16 @@ public class AchievementManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
-        activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
-        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op W", "Je hebt op W geduwt :D");
+    {
+        //REMEMBER TO REMOVE
+        PlayerPrefs.DeleteAll();
 
-        foreach(GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
+        activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
+        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op W", "Je hebt op W geduwt :D", 5);
+        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op S", "Je hebt op S geduwt :D", 5);
+        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] {"Duw op W", "Duw op S"});
+
+        foreach (GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
         {
             achievmentList.SetActive(false);
         }
@@ -96,6 +103,7 @@ public class AchievementManager : MonoBehaviour
             //DO SOMETHING AWESOME!
             GameObject achievement = (GameObject)Instantiate(visualAchievement);
             SetAchievementInfo("EarnCanvas", achievement, title);
+            textPoints.text = "Punten: " + PlayerPrefs.GetInt("Points");
             StartCoroutine(HideAchievement(achievement));
         }
     }
@@ -106,15 +114,25 @@ public class AchievementManager : MonoBehaviour
         Destroy(achievement);
     }
 
-    public void CreateAchievement(string parent, string unlocked, string title, string description)
+    public void CreateAchievement(string parent, string unlocked, string title, string description, int points, string[] dependencies = null)
     {
         GameObject achievement = (GameObject)Instantiate(achievementPrefab);
 
-        Achievement newAchievement = new Achievement(name, description, achievement);
+        Achievement newAchievement = new Achievement(name, description, points, achievement);
 
         achievements.Add(title, newAchievement);
 
         SetAchievementInfo(parent, achievement, title);
+
+        if(dependencies != null)
+        {
+            foreach(string achievementTitle in dependencies)
+            {
+                Achievement dependency = achievements[achievementTitle];
+                dependency.Child = title;
+                newAchievement.AddDependency(dependency);
+            }
+        }
     }
 
     public void SetAchievementInfo(string parent, GameObject achievement, string title)
@@ -124,6 +142,7 @@ public class AchievementManager : MonoBehaviour
 
         achievement.transform.GetChild(1).GetComponent<Text>().text = title;
         achievement.transform.GetChild(2).GetComponent<Text>().text = achievements[title].Description;
+        achievement.transform.GetChild(3).GetComponent<Text>().text = achievements[title].Points.ToString();
     }
 
     public void ChangeCategorty(GameObject button)
