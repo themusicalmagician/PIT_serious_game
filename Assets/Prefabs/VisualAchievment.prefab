@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 1637199774380051546}
   - component: {fileID: 4958197493824980753}
   - component: {fileID: 848233678802694711}
+  - component: {fileID: 7125360130147696039}
   m_Layer: 5
   m_Name: VisualAchievment
   m_TagString: Untagged
@@ -432,3 +433,15 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!225 &7125360130147696039
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548819122947268591}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

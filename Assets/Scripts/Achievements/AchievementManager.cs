@@ -23,6 +23,8 @@ public class AchievementManager : MonoBehaviour
 
     private static AchievementManager instance;
 
+    private int fadeTime = 2;
+
     public static AchievementManager Instance 
     {
         get
@@ -80,6 +82,11 @@ public class AchievementManager : MonoBehaviour
         {
             EarnAchievement("Duw op W");
         }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            EarnAchievement("Duw op S");
+        }
     }
 
     public void Resume()
@@ -104,7 +111,7 @@ public class AchievementManager : MonoBehaviour
             GameObject achievement = (GameObject)Instantiate(visualAchievement);
             SetAchievementInfo("EarnCanvas", achievement, title);
             textPoints.text = "Punten: " + PlayerPrefs.GetInt("Points");
-            StartCoroutine(HideAchievement(achievement));
+            StartCoroutine(FadeAchievement(achievement));
         }
     }
 
@@ -155,5 +162,34 @@ public class AchievementManager : MonoBehaviour
         activeButton.Click();
         activeButton = achievementButton;
 
+    }
+
+    private IEnumerator FadeAchievement(GameObject achievement)
+    {
+        CanvasGroup canvasGroup = achievement.GetComponent<CanvasGroup>();
+
+        float rate = 1.0f / fadeTime;
+
+        int startAlpha = 0;
+        int endAlpha = 1;
+
+        for (int i = 0; i < 2; i++)
+        {
+            float progress = 0.0f;
+
+            while (progress < 1.0f)
+            {
+                canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, progress);
+
+                progress += rate * Time.deltaTime;
+
+                yield return null;
+            }
+            yield return new WaitForSeconds(4);
+            startAlpha = 1;
+            endAlpha = 0;
+        }
+
+        Destroy(achievement);
     }
 }
