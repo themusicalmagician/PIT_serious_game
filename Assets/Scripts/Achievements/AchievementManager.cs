@@ -25,10 +25,10 @@ public class AchievementManager : MonoBehaviour
 
     private int fadeTime = 2;
 
-    public static AchievementManager Instance 
+    public static AchievementManager Instance
     {
         get
-        { 
+        {
             if (instance == null)
             {
                 instance = GameObject.FindObjectOfType<AchievementManager>();
@@ -36,7 +36,7 @@ public class AchievementManager : MonoBehaviour
 
             return AchievementManager.instance;
         }
-            
+
 
     }
 
@@ -49,14 +49,14 @@ public class AchievementManager : MonoBehaviour
         activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
         CreateAchievement("General", "Prestatie ontgrendeld", "Duw op W", "Je hebt op W geduwt :D", 5);
         CreateAchievement("General", "Prestatie ontgrendeld", "Duw op S", "Je hebt op S geduwt :D", 5);
-        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] {"Duw op W", "Duw op S"});
+        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] { "Duw op W", "Duw op S" });
 
         foreach (GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
         {
             achievmentList.SetActive(false);
         }
 
-        activeButton.Click(); 
+        activeButton.Click();
 
         achievementMenu.SetActive(false);
 
@@ -131,9 +131,9 @@ public class AchievementManager : MonoBehaviour
 
         SetAchievementInfo(parent, achievement, title);
 
-        if(dependencies != null)
+        if (dependencies != null)
         {
-            foreach(string achievementTitle in dependencies)
+            foreach (string achievementTitle in dependencies)
             {
                 Achievement dependency = achievements[achievementTitle];
                 dependency.Child = title;
