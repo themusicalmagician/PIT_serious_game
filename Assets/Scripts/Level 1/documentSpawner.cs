@@ -11,10 +11,10 @@ public class documentSpawner : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Spawner());
         spawnpos.x = 0f;
         spawnpos.y = 3f;
-        spawnpos.z = 0f;
+        spawnpos.z = 2f;
+        StartCoroutine(Spawner());
     }
 
     private IEnumerator Spawner()
@@ -23,7 +23,7 @@ public class documentSpawner : MonoBehaviour
 
         while (canSpawn)
         {
-             yield return wait;
+            yield return wait;
             int rand = Random.Range(0, documents.Length);
             GameObject documentToSpawn = documents[rand];
 
