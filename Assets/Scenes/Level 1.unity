@@ -2982,6 +2982,10 @@ MonoBehaviour:
   - {fileID: 8412307163607336923, guid: aa5c2ab29aadae04d9d41d1c51e4bd98, type: 3}
   spawnRate: 2
   canSpawn: 1
+  MaxSpawn: 15
+  x: 0
+  y: 3
+  z: 2
 --- !u!1 &1644756163
 GameObject:
   m_ObjectHideFlags: 0

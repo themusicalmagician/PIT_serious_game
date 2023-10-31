@@ -8,12 +8,16 @@ public class documentSpawner : MonoBehaviour
     [SerializeField] private float spawnRate = 2f;
     [SerializeField] private bool canSpawn = true;
     Vector3 spawnpos;
+    [SerializeField] private int MaxSpawn;
+    [SerializeField] private int x;
+    [SerializeField] private int y;
+    [SerializeField] private int z; 
 
     void Start()
     {
-        spawnpos.x = 0f;
-        spawnpos.y = 3f;
-        spawnpos.z = 2f;
+        spawnpos.x = x;
+        spawnpos.y = y;
+        spawnpos.z = z;
         StartCoroutine(Spawner());
     }
 
@@ -21,7 +25,7 @@ public class documentSpawner : MonoBehaviour
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
 
-        while (canSpawn)
+        while (canSpawn && MaxSpawn >= 1)
         {
             yield return wait;
             int rand = Random.Range(0, documents.Length);
@@ -31,6 +35,7 @@ public class documentSpawner : MonoBehaviour
 
 
             Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
+            MaxSpawn--;
         }
     }
 }
