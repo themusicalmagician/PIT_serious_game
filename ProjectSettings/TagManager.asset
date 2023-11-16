@@ -9,6 +9,8 @@ TagManager:
   - 3
   - 4
   - AchievementList
+  - Correct
+  - Wrong
   layers:
   - Default
   - TransparentFX

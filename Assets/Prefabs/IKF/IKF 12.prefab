@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2169140925939283773}
   - component: {fileID: 6670713381110265044}
   - component: {fileID: 7737788029649637881}
+  - component: {fileID: -5894620417254131754}
   m_Layer: 0
   m_Name: IKF 12
   m_TagString: 1
@@ -171,3 +172,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8444018, y: 3.1034875}
   m_EdgeRadius: 0
+--- !u!114 &-5894620417254131754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412307163607336923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e06e6bf44002d46ac49796be06b4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachedQuestion: {fileID: 11400000, guid: 4a09dbc2062f87645bcdafe310d636db, type: 2}

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class QuestionSetup : MonoBehaviour
 {
     [SerializeField] private List<QuestionData> questions;
+    [SerializeField] private List<ScriptableObject> scriptableObjects;
     private QuestionData currentQuestion;
 
     [SerializeField] private Text questionText;
