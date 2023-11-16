@@ -4057,9 +4057,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1964547061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c71ab4cf7b2fe5641a02602680a6e5ee, type: 3}
+  m_Script: {fileID: 11500000, guid: da0e046fdaf32b948862efd0650e26e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctSprite: {fileID: 21300000, guid: 8945ce7fde3fe6740ba254622d9e892c, type: 3}
+  wrongSprites:
+  - {fileID: 21300000, guid: 704783039a8a60043b1bf732b2741934, type: 3}
+  - {fileID: 21300000, guid: 30b39ebe6b2cfd3488d9d7606638d40b, type: 3}
+  - {fileID: 21300000, guid: c53d0d24eac79b3439fb7d49c74f35e0, type: 3}
 --- !u!1 &2024433214
 GameObject:
   m_ObjectHideFlags: 0
