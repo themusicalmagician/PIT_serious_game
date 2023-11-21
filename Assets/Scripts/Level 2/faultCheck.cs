@@ -7,6 +7,7 @@ public class faultCheck : MonoBehaviour
 {
     [SerializeField] private int boxNumber;
     [SerializeField] private Score score;
+    [SerializeField] private documentSpawner loadNextSprite;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,12 +19,13 @@ public class faultCheck : MonoBehaviour
             {
                 SceneManager.LoadScene("WinScreen");
             }
-
+            StartCoroutine(loadNextSprite.spawnNext());
         }
         else
         {
             Score.currentScore--;
             Destroy(collision.gameObject);
+            StartCoroutine(loadNextSprite.spawnNext());
         }
     }
 }

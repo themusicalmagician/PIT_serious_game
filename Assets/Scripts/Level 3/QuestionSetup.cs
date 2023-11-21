@@ -75,6 +75,11 @@ public class QuestionSetup : MonoBehaviour
             if (i == correctAnswerChoice)
             {
                 isCorrect = true;
+                answerButtons[i].tag = "Correct";
+            }
+            else
+            {
+                answerButtons[i].tag = "Wrong";
             }
 
             answerButtons[i].SetIsCorrect(isCorrect);

@@ -8,7 +8,7 @@ public class setButtonTag : MonoBehaviour
     [SerializeField] private Text answerText;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
         if(answerText != null)
         {

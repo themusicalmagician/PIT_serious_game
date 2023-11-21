@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AnswerButton : MonoBehaviour
 {
     private bool isCorrect;
     [SerializeField] private Text answerText;
+    [SerializeField] private Score score;
+    [SerializeField] private documentSpawner nextQuestion;
 
     public void SetAnswerSprite(string newText)
     {
@@ -20,13 +23,20 @@ public class AnswerButton : MonoBehaviour
 
     public void OnClick()
     {
-        if (isCorrect)
+        if (isCorrect && gameObject.CompareTag("Correct"))
         {
             Debug.Log("CORRECT ANSWER");
+            Score.currentScore++;
+            if (Score.currentScore == Score.maxScore)
+            {
+                SceneManager.LoadScene("WinScreen");
+            }
+            nextQuestion.spawnNext();
         }
         else
         {
             Debug.Log("WRONG ANSWER");
         }
+
     }
 }

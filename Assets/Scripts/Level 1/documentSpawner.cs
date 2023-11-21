@@ -21,7 +21,7 @@ public class documentSpawner : MonoBehaviour
         StartCoroutine(Spawner());
     }
 
-    private IEnumerator Spawner()
+    public IEnumerator Spawner()
     {
         WaitForSeconds wait = new WaitForSeconds(spawnRate);
 
@@ -37,5 +37,19 @@ public class documentSpawner : MonoBehaviour
             Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
             MaxSpawn--;
         }
+    }
+
+
+    public IEnumerator spawnNext()
+    {
+        yield return new WaitForSeconds(1);
+        MaxSpawn = 1;
+        int rand = Random.Range(0, documents.Length);
+        GameObject documentToSpawn = documents[rand];
+
+        spawnpos.z += 1f;
+
+
+        Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
     }
 }

@@ -7,7 +7,7 @@ public class Winscreen1 : MonoBehaviour
 {
     public void mainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void gameQuit()

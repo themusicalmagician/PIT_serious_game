@@ -7,6 +7,7 @@ public class boxCheck : MonoBehaviour
 {
     [SerializeField] private int boxNumber;
     [SerializeField] private Score score;
+    [SerializeField] private documentSpawner loadNextSprite;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +19,7 @@ public class boxCheck : MonoBehaviour
             {
                 SceneManager.LoadScene("WinScreen");
             }
-
+            StartCoroutine(loadNextSprite.spawnNext());
         }
     }
 }

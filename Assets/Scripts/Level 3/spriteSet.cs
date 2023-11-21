@@ -25,7 +25,7 @@ public class spriteSet : MonoBehaviour
         foreach(Transform child in transform)
         {
             child.GetComponentInChildren<Text>().text = "";
-            if (gameObject.CompareTag("Correct"))
+            if (child.gameObject.CompareTag("Correct"))
             {
                 child.GetComponent<Button>().image.sprite = correctSprite;
             }
