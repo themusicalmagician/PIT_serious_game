@@ -31,12 +31,17 @@ public class AnswerButton : MonoBehaviour
             {
                 SceneManager.LoadScene("WinScreen");
             }
+
             nextQuestion.spawnNext();
         }
         else
         {
             Debug.Log("WRONG ANSWER");
             Score.currentScore--;
+            if(Score.currentScore == -15)
+            {
+                SceneManager.LoadScene("LoseScreen");
+            }
         }
 
     }

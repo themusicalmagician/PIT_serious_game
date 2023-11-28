@@ -26,6 +26,10 @@ public class faultCheck : MonoBehaviour
             Score.currentScore--;
             Destroy(collision.gameObject);
             StartCoroutine(loadNextSprite.spawnNext());
+            if (Score.currentScore == -15)
+            {
+                SceneManager.LoadScene("LoseScreen");
+            }
         }
     }
 }
