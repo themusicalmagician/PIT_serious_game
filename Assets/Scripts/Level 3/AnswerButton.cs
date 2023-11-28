@@ -36,6 +36,7 @@ public class AnswerButton : MonoBehaviour
         else
         {
             Debug.Log("WRONG ANSWER");
+            Score.currentScore--;
         }
 
     }
