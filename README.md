@@ -22,5 +22,7 @@ Veel succes en misschien spreken we ons nog wel :)
 
 ## Contactgegevens
 School email: m.connotte@sintlucasedu.nl
+
 Persoonlijke email: mconnotte@gmail.com
+
 Discord Username: demonprincemoik
