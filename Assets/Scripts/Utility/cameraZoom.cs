@@ -7,11 +7,12 @@ public class cameraZoom : MonoBehaviour
     private float zoom;
     private float zoomMultiplier = 4f;
     private float minZoom = 2f;
-    [SerializeField] private float maxZoom;
+
     private float velocity = 0f;
     private float smoothTime = 0.25f;
 
     [SerializeField] private Camera cam;
+    [SerializeField] private float maxZoom;
 
     // Start is called before the first frame update
     void Start()

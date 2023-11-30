@@ -7,11 +7,13 @@ public class documentSpawner : MonoBehaviour
     [SerializeField] private GameObject[] documents;
     [SerializeField] private float spawnRate = 2f;
     [SerializeField] private bool canSpawn = true;
-    Vector3 spawnpos;
+
     [SerializeField] private int MaxSpawn;
     [SerializeField] private int x;
     [SerializeField] private int y;
-    [SerializeField] private int z; 
+    [SerializeField] private int z;
+
+    Vector3 spawnpos;
 
     void Start()
     {

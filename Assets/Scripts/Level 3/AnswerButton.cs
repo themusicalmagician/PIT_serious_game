@@ -27,6 +27,7 @@ public class AnswerButton : MonoBehaviour
         {
             Debug.Log("CORRECT ANSWER");
             Score.currentScore++;
+
             if (Score.currentScore == Score.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
@@ -38,6 +39,7 @@ public class AnswerButton : MonoBehaviour
         {
             Debug.Log("WRONG ANSWER");
             Score.currentScore--;
+
             if(Score.currentScore == -15)
             {
                 SceneManager.LoadScene("LoseScreen");

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222f2501f301603499cdc89e10be392f, type: 3}
   m_Name: IKF12
   m_EditorClassIdentifier: 
-  question: 
-  category: 
-  answers: []
+  question: Kies de Juiste Journaalpost
+  category: IKF
+  answers:
+  - OPTIE 1
+  - OPTIE 2
+  - OPTIE 3
+  - OPTIE 4
