@@ -33,7 +33,7 @@ public class AnswerButton : MonoBehaviour
                 SceneManager.LoadScene("WinScreen");
             }
 
-            nextQuestion.spawnNext();
+            StartCoroutine(nextQuestion.spawnNext());
         }
         else
         {

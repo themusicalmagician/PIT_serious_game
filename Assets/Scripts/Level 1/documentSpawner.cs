@@ -53,5 +53,6 @@ public class documentSpawner : MonoBehaviour
 
 
         Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
+        Debug.Log("next Spawned");
     }
 }

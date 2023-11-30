@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - {fileID: 11400000, guid: 4a09dbc2062f87645bcdafe310d636db, type: 2}
+  - {fileID: 11400000, guid: c92e8ab42c6b5a44caada5ed56361b5f, type: 2}
   scriptableObjects: []
   questionText: {fileID: 535616452}
   catergoryText: {fileID: 983462995}
@@ -2699,8 +2699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b306b047c647c544b91bf294602af6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxZoom: 10
   cam: {fileID: 973973901}
+  maxZoom: 10
 --- !u!1 &983462992
 GameObject:
   m_ObjectHideFlags: 0
