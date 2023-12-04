@@ -26,9 +26,9 @@ public class AnswerButton : MonoBehaviour
         if (isCorrect && gameObject.CompareTag("Correct"))
         {
             Debug.Log("CORRECT ANSWER");
-            Score.currentScore++;
+            Score.Instance.currentScore++;
 
-            if (Score.currentScore == Score.maxScore)
+            if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
             }
@@ -38,9 +38,9 @@ public class AnswerButton : MonoBehaviour
         else
         {
             Debug.Log("WRONG ANSWER");
-            Score.currentScore--;
+            Score.Instance.currentScore--;
 
-            if(Score.currentScore == -15)
+            if(Score.Instance.currentScore == -15)
             {
                 SceneManager.LoadScene("LoseScreen");
             }

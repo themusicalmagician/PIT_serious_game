@@ -184,4 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e06e6bf44002d46ac49796be06b4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachedQuestion: {fileID: 11400000, guid: 4a09dbc2062f87645bcdafe310d636db, type: 2}
+  buttons:
+  - {fileID: 5073315329725893261, guid: 8a2c87b704eb8cd4c9183a9f4403a1b6, type: 3}
+  - {fileID: 6420379143166062629, guid: 5bbc33c57a965f347ba583de44a70427, type: 3}
+  - {fileID: 8488961240572410695, guid: b91fad2b6b41aaa46810671518811aba, type: 3}
+  - {fileID: 5114583207448016596, guid: 0eb72f9f08a19b14f86c8927f39f7118, type: 3}
+  spawnPoints: []

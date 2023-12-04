@@ -13,9 +13,9 @@ public class boxCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(boxNumber.ToString()))
         {
-            Score.currentScore++;
+            Score.Instance.currentScore++;
             Destroy(collision.gameObject);
-            if (Score.currentScore == Score.maxScore)
+            if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
             }

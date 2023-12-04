@@ -13,6 +13,8 @@ public class documentSpawner : MonoBehaviour
     [SerializeField] private int y;
     [SerializeField] private int z;
 
+    [SerializeField] private GameObject currentDocument;
+
     Vector3 spawnpos;
 
     void Start()
@@ -36,7 +38,7 @@ public class documentSpawner : MonoBehaviour
             spawnpos.z += 1f;
 
 
-            Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
+            currentDocument = Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
             MaxSpawn--;
         }
     }
@@ -45,6 +47,8 @@ public class documentSpawner : MonoBehaviour
     public IEnumerator spawnNext()
     {
         yield return new WaitForSeconds(1);
+        currentDocument.GetComponent<QuestionLink>().enabled = false;
+        Destroy(currentDocument);
         MaxSpawn = 1;
         int rand = Random.Range(0, documents.Length);
         GameObject documentToSpawn = documents[rand];
@@ -52,7 +56,7 @@ public class documentSpawner : MonoBehaviour
         spawnpos.z += 1f;
 
 
-        Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
+        currentDocument = Instantiate(documentToSpawn, spawnpos, Quaternion.identity);
         Debug.Log("next Spawned");
     }
 }

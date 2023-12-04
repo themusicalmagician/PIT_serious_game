@@ -5,10 +5,24 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    public static Score Instance { get; private set; }
+
     [SerializeField] private Text scoreText;
 
-    public static int currentScore;
-    public static int maxScore = 15;
+    public int currentScore;
+    public int maxScore = 15;
+
+    private void Awake()
+    {
+        if (Instance != null) 
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
