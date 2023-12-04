@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class QuestionLink : MonoBehaviour
 {
-    [SerializeField] private ScriptableObject attachedQuestion;
+    [SerializeField] List<GameObject> correctButton = new List<GameObject>();
+    [SerializeField] List <GameObject> wrongButtons = new List<GameObject>();
 
     void Awake()
     {
