@@ -5,7 +5,6 @@ using UnityEngine;
 public class documentSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] documents;
-    [SerializeField] private float spawnRate = 2f;
     [SerializeField] private bool canSpawn = true;
 
     [SerializeField] private int MaxSpawn;
@@ -27,7 +26,7 @@ public class documentSpawner : MonoBehaviour
 
     public IEnumerator Spawner()
     {
-        WaitForSeconds wait = new WaitForSeconds(spawnRate);
+        WaitForSeconds wait = new WaitForSeconds(1);
 
         while (canSpawn && MaxSpawn >= 1)
         {

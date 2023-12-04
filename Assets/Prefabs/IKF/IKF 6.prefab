@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1673711139804797360, guid: ed622713601866b409205a7c538d8d26, type: 3}
+  - {fileID: 1050647871773270192, guid: 6058831a8d6df1340ac4edbdbc189a06, type: 3}
+  - {fileID: 2775070764559459559, guid: 6acecdc44217d8640997735f85840d97, type: 3}
+  - {fileID: 360250664310236912, guid: 2b6d89bfa02271b48a340f444e4d0be3, type: 3}
   spawnPoints: []
   buttonObjects: []
