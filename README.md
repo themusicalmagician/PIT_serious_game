@@ -14,7 +14,7 @@ Voor deze vragen ben ik gewoon bereikbaar via de contactgegevens onder aan deze 
 staat het project op mijn GitHub, hier kun je gewoon aan blijven toevoegen dat is geen probleem. Dan kan ik ook af en toe 
 even bijspringen als je eventueel hulp hierbij nodig hebt.
 
-Voeg me gerust toe op Discord, dan kun je me makkelijker bereiken.
+Voeg me gerust toe op Discord, daar ben ik makkelijker bereikbaar :)
 
 Ik hoop dat je net zo veel plezier zult hebben met dit project als ik dat had.
 Veel succes en misschien spreken we ons nog wel :)
