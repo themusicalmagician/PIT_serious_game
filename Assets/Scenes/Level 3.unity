@@ -1403,6 +1403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementPrefab: {fileID: 6181719977492047392, guid: 32a0182732e349243b5e3efe5625bb33, type: 3}
+  achievementSpeaker: {fileID: 559459816}
   scrollRect: {fileID: 227980940}
   achievementMenu: {fileID: 1051339868}
   visualAchievement: {fileID: 8548819122947268591, guid: 4df212eb2bddb7041bff812879713d9e, type: 3}
@@ -1433,7 +1434,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d39455238dc62be43bfd912db3683065, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
