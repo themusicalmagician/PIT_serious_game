@@ -1,5 +1,5 @@
 # Serious Game Boekhouden 
-## Onder leiding van Joost Puijenbroek en tot nu toe bewerkt door Mike Connotte
+## Onder leiding van Joost van Puijenbroek en tot nu toe bewerkt door Mike Connotte
 
 Welkom bij dit mooie project. Ik ben Mike en ik geef je een beetje een intro zodat je weet waar je aan begint.
 Je werkt verder aan de basis die ik gemaakt heb voor de serious game boekhouden. 
