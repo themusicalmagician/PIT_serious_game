@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AchievementManager : MonoBehaviour
 {
     [SerializeField] private GameObject achievementPrefab;
+    [SerializeField] private AudioSource achievementSpeaker;
 
     private AchievementButton activeButton;
     public ScrollRect scrollRect;
@@ -81,11 +82,13 @@ public class AchievementManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             EarnAchievement("Duw op W");
+            achievementSpeaker.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             EarnAchievement("Duw op S");
+            achievementSpeaker.Play();
         }
     }
 

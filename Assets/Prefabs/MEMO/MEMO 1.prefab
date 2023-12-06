@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2169140925939283773}
   - component: {fileID: 6670713381110265044}
   - component: {fileID: 7737788029649637881}
+  - component: {fileID: -2336726025213260056}
   m_Layer: 0
   m_Name: MEMO 1
   m_TagString: 4
@@ -171,3 +172,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8444018, y: 3.1034875}
   m_EdgeRadius: 0
+--- !u!114 &-2336726025213260056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412307163607336923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e06e6bf44002d46ac49796be06b4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 3105955374791020441, guid: 1b13f522d84569d4ca8121f4071d9862, type: 3}
+  - {fileID: 334297179387496494, guid: dc55c9043b51f604bbad3f9c74edd7e6, type: 3}
+  - {fileID: 3885763499158768451, guid: 6fb70b7cef64dd847abf9f690f2467f6, type: 3}
+  - {fileID: 7807719262949074090, guid: ef8d04ec4a6655446929007455bb26ab, type: 3}
+  spawnPoints: []
+  buttonObjects: []
