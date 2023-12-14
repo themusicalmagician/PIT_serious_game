@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class mainMenu : MonoBehaviour
 {
+    [SerializeField] private AchievementManager introAchievement;
+
+    public IEnumerator LoadMainMenu()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(1);
+    }
+
     public void menuIntro()
     {
-        SceneManager.LoadScene(1);
+        introAchievement.EarnAchievement("Welkom bij Bike Totaal");
+        introAchievement.PlaySound();
+        StartCoroutine(LoadMainMenu());
     }
 
     public void level1Intro()

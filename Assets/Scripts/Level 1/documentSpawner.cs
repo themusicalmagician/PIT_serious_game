@@ -46,7 +46,6 @@ public class documentSpawner : MonoBehaviour
     public IEnumerator spawnNext()
     {
         yield return new WaitForSeconds(1);
-        currentDocument.GetComponent<QuestionLink>().enabled = false;
         Destroy(currentDocument);
         MaxSpawn = 1;
         int rand = Random.Range(0, documents.Length);

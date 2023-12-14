@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6670713381110265044}
   - component: {fileID: 7737788029649637881}
   - component: {fileID: 7141011754892890517}
+  - component: {fileID: 6659110866632217944}
   m_Layer: 0
   m_Name: IKF 8
   m_TagString: 1
@@ -191,3 +192,16 @@ MonoBehaviour:
   - {fileID: 6751506261742943529, guid: 28825ab8d9a0c884594e27d5258d544e, type: 3}
   spawnPoints: []
   buttonObjects: []
+--- !u!114 &6659110866632217944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8412307163607336923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ffa97c596e13243931836903c883ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionLink: {fileID: 0}

@@ -48,9 +48,22 @@ public class AchievementManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
         activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
-        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op W", "Je hebt op W geduwt :D", 5);
-        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op S", "Je hebt op S geduwt :D", 5);
-        CreateAchievement("General", "Prestatie ontgrendeld", "Duw op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] { "Duw op W", "Duw op S" });
+
+        //Test Achievements
+        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op W", "Je hebt op W geduwt :D", 5);
+        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op S", "Je hebt op S geduwt :D", 5);
+        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] { "Duw op W", "Duw op S" });
+
+        //Basic Achievements
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Welkom bij Bike Totaal", "Voltooi de intro van de game", 10);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 1 behaald", "Haal 15 punten in level 1", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 2 behaald", "Haal 15 punten in level 2", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 3 behaald", "Haal 15 punten in level 3", 5);
+
+        //Master Achievements
+        CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 2", "Voltooi level 2 foutloos", 10);
+        CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 3", "Voltooi level 3 foutloos", 10);
+        
 
         foreach (GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
         {
@@ -82,14 +95,19 @@ public class AchievementManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             EarnAchievement("Duw op W");
-            achievementSpeaker.Play();
+            PlaySound();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             EarnAchievement("Duw op S");
-            achievementSpeaker.Play();
+            PlaySound();
         }
+    }
+
+    public void PlaySound()
+    {
+        achievementSpeaker.Play();
     }
 
     public void Resume()
@@ -155,7 +173,7 @@ public class AchievementManager : MonoBehaviour
         achievement.transform.GetChild(3).GetComponent<Text>().text = achievements[title].Points.ToString();
     }
 
-    public void ChangeCategorty(GameObject button)
+    public void ChangeCategory(GameObject button)
     {
         AchievementButton achievementButton = button.GetComponent<AchievementButton>();
 

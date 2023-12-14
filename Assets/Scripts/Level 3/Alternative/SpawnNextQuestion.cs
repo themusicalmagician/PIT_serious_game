@@ -7,6 +7,8 @@ public class SpawnNextQuestion : MonoBehaviour
 {
 
     [SerializeField] private documentSpawner nextQuestion;
+    [SerializeField] private AchievementManager level3Achievements;
+
 
     public void OnClick(GameObject button)
     {
@@ -19,6 +21,8 @@ public class SpawnNextQuestion : MonoBehaviour
             if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
                 SceneManager.LoadScene("WinScreen");
+                level3Achievements.EarnAchievement("Level 3 behaald");
+                level3Achievements.PlaySound();
             }
 
             StartCoroutine(nextQuestion.spawnNext());

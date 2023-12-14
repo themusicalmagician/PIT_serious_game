@@ -8,6 +8,7 @@ public class boxCheck : MonoBehaviour
     [SerializeField] private int boxNumber;
     [SerializeField] private Score score;
     [SerializeField] private documentSpawner loadNextSprite;
+    [SerializeField] private AchievementManager level1Achievements;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,9 +18,17 @@ public class boxCheck : MonoBehaviour
             Destroy(collision.gameObject);
             if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
-                SceneManager.LoadScene("WinScreen");
+                level1Achievements.EarnAchievement("Level 1 behaald");
+                level1Achievements.PlaySound();
+                StartCoroutine(LoadWinScreen());
             }
             StartCoroutine(loadNextSprite.spawnNext());
         }
+    }
+
+    public IEnumerator LoadWinScreen()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("WinScreen");
     }
 }

@@ -1837,6 +1837,7 @@ MonoBehaviour:
   boxNumber: 1
   score: {fileID: 1942565940}
   loadNextSprite: {fileID: 165178038}
+  level2Achievements: {fileID: 823580548}
 --- !u!1 &801936550
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2012,7 @@ MonoBehaviour:
   boxNumber: 3
   score: {fileID: 1942565940}
   loadNextSprite: {fileID: 165178038}
+  level2Achievements: {fileID: 823580548}
 --- !u!1 &805526953
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4036,7 @@ MonoBehaviour:
   boxNumber: 4
   score: {fileID: 1942565940}
   loadNextSprite: {fileID: 165178038}
+  level2Achievements: {fileID: 823580548}
 --- !u!1 &1719046121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4848,6 +4851,7 @@ MonoBehaviour:
   boxNumber: 2
   score: {fileID: 1942565940}
   loadNextSprite: {fileID: 165178038}
+  level2Achievements: {fileID: 823580548}
 --- !u!1 &2136732168
 GameObject:
   m_ObjectHideFlags: 0
