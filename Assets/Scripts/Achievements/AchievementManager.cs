@@ -49,11 +49,6 @@ public class AchievementManager : MonoBehaviour
 
         activeButton = GameObject.Find("GeneralBtn").GetComponent<AchievementButton>();
 
-        //Test Achievements
-        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op W", "Je hebt op W geduwt :D", 5);
-        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op S", "Je hebt op S geduwt :D", 5);
-        CreateAchievement("Other", "Prestatie ontgrendeld", "Druk op alle knoppen", "Duw op alle knoppen om dit te ontgrendelen", 10, new string[] { "Duw op W", "Duw op S" });
-
         //Basic Achievements
         CreateAchievement("General", "Prestatie Ontgrendeld", "Welkom bij Bike Totaal", "Voltooi de intro van de game", 10);
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 1 behaald", "Haal 15 punten in level 1", 5);
