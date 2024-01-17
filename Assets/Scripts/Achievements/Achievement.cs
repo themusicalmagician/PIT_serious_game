@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Achievement
 {
-
+    #region variables
+    //Dit zijn de variables die de achievments hun waardes geven
     private string name;
     private string description;
     private int points;
@@ -13,8 +14,11 @@ public class Achievement
 
     private GameObject achievementRef;
 
+    //Lijst van de dependencies voor de achievements
     private List<Achievement> dependencies = new List<Achievement>();
+    #endregion
 
+    #region set values 
     public string Name
     {
         get => name;
@@ -43,7 +47,9 @@ public class Achievement
         get => child; 
         set => child = value; 
     }
+    #endregion
 
+    //Dit laad de achievement in 
     public Achievement(string name, string description, int points, GameObject achievementRef)
     {
         this.Name = name;
@@ -55,11 +61,13 @@ public class Achievement
         LoadAchievement();
     }
 
+    //Dit voegt een value toe aan de lijst met dependencies
     public void AddDependency(Achievement dependency)
     {
         dependencies.Add(dependency);
     }
 
+    //Dit is de functie die het mogelijk maakt om de achievement te behalen
     public bool EarnAchievement()
     {
         if (!Unlocked && !dependencies.Exists(x => x.unlocked == false))
@@ -80,6 +88,7 @@ public class Achievement
         }
     }
 
+    //Deze functie zorgt ervoor dat de achievements opgeslagen worden
     public void SaveAchievement(bool value)
     {
         Unlocked = value;
@@ -93,6 +102,7 @@ public class Achievement
         PlayerPrefs.Save();
     }
 
+    //Via deze code word het geregeld dat je behaalde punten en achievements worden geladen
     public void LoadAchievement()
     {
         unlocked = PlayerPrefs.GetInt(name) == 1 ? true : false;

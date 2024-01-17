@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class AchievementManager : MonoBehaviour
 {
+
+    #region variables
     [SerializeField] private GameObject achievementPrefab;
     [SerializeField] private AudioSource achievementSpeaker;
 
@@ -25,6 +27,7 @@ public class AchievementManager : MonoBehaviour
     private static AchievementManager instance;
 
     private int fadeTime = 2;
+    #endregion
 
     public static AchievementManager Instance
     {

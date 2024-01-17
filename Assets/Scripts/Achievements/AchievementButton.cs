@@ -15,6 +15,8 @@ public class AchievementButton : MonoBehaviour
         sprite = GetComponent<Image>();
     }
 
+
+    //Deze functie zorgt ervoor dat je tussen de verschillende achievement lijsten kan wisselen
     public void Click()
     {
         if(sprite.sprite == neutral)
