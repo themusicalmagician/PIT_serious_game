@@ -29,6 +29,7 @@ public class AchievementManager : MonoBehaviour
     private int fadeTime = 2;
     #endregion
 
+    //Zorgt ervoor dat de achievement manager bestaat
     public static AchievementManager Instance
     {
         get
@@ -77,6 +78,7 @@ public class AchievementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //opent het achievement menu en pauzeert de game
         if (Input.GetKeyDown(KeyCode.Backslash))
         {
             if (gameIsPaused)
@@ -90,6 +92,7 @@ public class AchievementManager : MonoBehaviour
             }
         }
 
+        //Dit zijn 2 test achievements
         if (Input.GetKeyDown(KeyCode.W))
         {
             EarnAchievement("Duw op W");
@@ -103,6 +106,7 @@ public class AchievementManager : MonoBehaviour
         }
     }
 
+    //Speelt een geluid af als je een achievement behaald
     public void PlaySound()
     {
         achievementSpeaker.Play();
