@@ -58,6 +58,7 @@ public class AchievementManager : MonoBehaviour
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 1 behaald", "Haal 15 punten in level 1", 5);
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 2 behaald", "Haal 15 punten in level 2", 5);
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 3 behaald", "Haal 15 punten in level 3", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "TestAchievement", "YAAAY hij werkt :D", 5);
 
         //Master Achievements
         CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 2", "Voltooi level 2 foutloos", 10);

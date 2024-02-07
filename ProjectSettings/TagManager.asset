@@ -13,6 +13,8 @@ TagManager:
   - Wrong
   - ParticleL
   - ParticleR
+  - WindowTip
+  - WindowTop
   layers:
   - Default
   - TransparentFX
