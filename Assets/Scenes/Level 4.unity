@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 720845149}
   currentScore: 0
-  maxScore: 15
+  maxScore: 3
 --- !u!1 &455929550
 GameObject:
   m_ObjectHideFlags: 0
@@ -13622,7 +13622,7 @@ MonoBehaviour:
   wrongTip: {fileID: 0}
   windowTop: {fileID: 0}
   nextQuestion: {fileID: 1846073585}
-  level3Achievements: {fileID: 0}
+  level3Achievements: {fileID: 1731980731}
   isTestLevel: 0
   goodJobSound: {fileID: 8300000, guid: f1f7ab1df140c5b4c83bd84507cc2caf, type: 3}
   wrongSound: {fileID: 8300000, guid: c43f9192ed83c1a45874d979633ccd5c, type: 3}

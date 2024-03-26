@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEditor;
 
+
+
 [CustomEditor(typeof(JournaalSpawner))]
 public class JournaalSpawnerInspector : Editor
 {
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+          base.OnInspectorGUI();
 
         JournaalSpawner spawner = (JournaalSpawner)target;
 

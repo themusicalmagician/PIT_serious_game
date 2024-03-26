@@ -39,7 +39,7 @@ public class SpawnNextQuestion : MonoBehaviour
             {
                 level3Achievements.EarnAchievement("Level 3 behaald");
                 level3Achievements.PlaySound();
-                SceneManager.LoadScene("WinScreen");
+                StartCoroutine(LoadWinScreenAfterDelay());
             }
 
             StartCoroutine(nextQuestion.spawnNext());
@@ -61,7 +61,7 @@ public class SpawnNextQuestion : MonoBehaviour
                 ShowAndAnimateWindow(wrongTip, wrongSound);
                 Score.Instance.currentScore--;
 
-                if (Score.Instance.currentScore == -15)
+                if (Score.Instance.currentScore == -Score.Instance.maxScore) // Trigger at negative of maxScore
                 {
                     SceneManager.LoadScene("LoseScreen");
                 }
@@ -69,6 +69,11 @@ public class SpawnNextQuestion : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadWinScreenAfterDelay()
+    {
+        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        SceneManager.LoadScene("WinScreen");
+    }
     private void ShowAndAnimateWindow(GameObject window, AudioClip sound)
     {
         window.SetActive(true);
