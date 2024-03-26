@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SpawnNextQuestion : MonoBehaviour
 {
     [SerializeField] private GameObject wrongTip;
-    [SerializeField] private GameObject windowTop; // Add this variable
+    [SerializeField] private GameObject windowTop;
     [SerializeField] private documentSpawner nextQuestion;
     [SerializeField] private AchievementManager level3Achievements;
     [SerializeField] private bool isTestLevel = false;
@@ -37,9 +37,9 @@ public class SpawnNextQuestion : MonoBehaviour
 
             if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
-                SceneManager.LoadScene("WinScreen");
                 level3Achievements.EarnAchievement("Level 3 behaald");
                 level3Achievements.PlaySound();
+                SceneManager.LoadScene("WinScreen");
             }
 
             StartCoroutine(nextQuestion.spawnNext());
@@ -58,6 +58,7 @@ public class SpawnNextQuestion : MonoBehaviour
             }
             else
             {
+                ShowAndAnimateWindow(wrongTip, wrongSound);
                 Score.Instance.currentScore--;
 
                 if (Score.Instance.currentScore == -15)
@@ -73,7 +74,6 @@ public class SpawnNextQuestion : MonoBehaviour
         window.SetActive(true);
         audioSource.PlayOneShot(sound); // Play the corresponding sound
 
-        // You can add animation or fading effects here
 
         StartCoroutine(HideWindow(window));
     }
@@ -81,10 +81,6 @@ public class SpawnNextQuestion : MonoBehaviour
     private IEnumerator HideWindow(GameObject window)
     {
         yield return new WaitForSeconds(1f); // Delay before starting to fade
-
-        // You can add fading or animation logic here
-
-        yield return new WaitForSeconds(1f); // Additional delay or animation time
 
         window.SetActive(false);
     }

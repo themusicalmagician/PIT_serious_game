@@ -15,6 +15,7 @@ public class documentSpawner : MonoBehaviour
     [SerializeField] private GameObject currentDocument;
 
     Vector3 spawnpos;
+    
 
     void Start()
     {

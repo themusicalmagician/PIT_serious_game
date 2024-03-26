@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965217dd79aed804c9c61093d32ef500, type: 3}
+  m_Name: Categories
+  m_EditorClassIdentifier: 
+  categories:
+  - categoryName: "0300\tGebouwen "
+  - categoryName: "0310\tAfschrijving gebouwen "
+  - categoryName: "0400\tInventaris "
+  - categoryName: "0410\tAfschrijving inventaris "
+  - categoryName: "0420\tVervoermiddelen "
+  - categoryName: "0430\tAfschrijving vervoermiddelen "
+  - categoryName: "0440\tKantoorinventaris "
+  - categoryName: "0450\tAfschrijving kantoorinventaris "
+  - categoryName: "0700\tEigen vermogen "
+  - categoryName: "0930\t4,2% Hypothecaire lening "
+  - categoryName: "0990\t5% Lening o/g "
+  - categoryName: "1000\tKas "
+  - categoryName: "1100\tBank  "
+  - categoryName: "1300\tDebiteuren "
+  - categoryName: "1600\tCrediteuren\t"
+  - categoryName: "1800\tTe betalen btw-laag "
+  - categoryName: "1810\tTe betalen BTW hoog "
+  - categoryName: "1820\tTe vorderen btw-laag "
+  - categoryName: "1830\tTe vorderen btw-hoog\t "
+  - categoryName: "1860\tBtw priv\xE9-gebruik "
+  - categoryName: "1890\tAf te dragen btw "
+  - categoryName: "7000\tVoorraad "
+  - categoryName: "8500\tOmzet verkopen "
+  - categoryName: "8000\tKostprijs "
+  - categoryName: "9200\tVoorraadverschillen "
+  - categoryName: "0430\tAfschrijving "
+  - categoryName: "4550\tAlgemene kosten "

@@ -51,6 +51,20 @@ public class mainMenu : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
+    public void level4()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void level5()
+    {
+        SceneManager.LoadScene("Level5");
+    }
+
+    public void level6()
+    {
+        SceneManager.LoadScene("Level6");
+    }
     public void AchievementMenu()
     {
         SceneManager.LoadScene(9);
