@@ -10,6 +10,7 @@ public class SpawnNextQuestion : MonoBehaviour
     [SerializeField] private documentSpawner nextQuestion;
     [SerializeField] private AchievementManager level3Achievements;
     [SerializeField] private bool isTestLevel = false;
+    [SerializeField] private bool level4 = false;
 
     [SerializeField] private AudioClip goodJobSound; // Add this variable
     [SerializeField] private AudioClip wrongSound; // Add this variable
@@ -37,8 +38,16 @@ public class SpawnNextQuestion : MonoBehaviour
 
             if (Score.Instance.currentScore == Score.Instance.maxScore)
             {
-                level3Achievements.EarnAchievement("Level 3 behaald");
-                level3Achievements.PlaySound();
+                if (level4) // Check if level 4 bool is true
+                {
+                    level3Achievements.EarnAchievement("Level 4 behaald"); // Call EarnAchievement for level 4
+                    level3Achievements.PlaySound(); // Play sound for level 4 achievement
+                }
+                else
+                {
+                    level3Achievements.EarnAchievement("Level 3 behaald"); // Call EarnAchievement for level 3
+                    level3Achievements.PlaySound(); // Play sound for level 3 achievement
+                }
                 StartCoroutine(LoadWinScreenAfterDelay());
             }
 

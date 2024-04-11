@@ -58,12 +58,20 @@ public class AchievementManager : MonoBehaviour
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 1 behaald", "Haal 15 punten in level 1", 5);
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 2 behaald", "Haal 15 punten in level 2", 5);
         CreateAchievement("General", "Prestatie Ontgrendeld", "Level 3 behaald", "Haal 15 punten in level 3", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 4 behaald", "Haal 15 punten in level 4", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 5 behaald", "Haal 15 punten in level 5", 5);
+        CreateAchievement("General", "Prestatie Ontgrendeld", "Level 6 behaald", "Haal 15 punten in level 6", 5);
         CreateAchievement("General", "Prestatie Ontgrendeld", "TestAchievement", "YAAAY hij werkt :D", 5);
 
         //Master Achievements
         CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 2", "Voltooi level 2 foutloos", 10);
         CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 3", "Voltooi level 3 foutloos", 10);
-        
+        CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 4", "Voltooi level 4 foutloos", 10);
+        CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 5", "Voltooi level 5 foutloos", 10);
+        CreateAchievement("Master", "Prestatie Ontgrendeld", "Meester van level 6", "Voltooi level 6 foutloos", 10);
+
+
+
 
         foreach (GameObject achievmentList in GameObject.FindGameObjectsWithTag("AchievementList"))
         {

@@ -24,7 +24,7 @@ MonoBehaviour:
     isDebit: 1
   - categoryName: "1600\tCrediteuren\t"
     correctAmount: 4743.2
-    isDebit: 1
+    isDebit: 0
   - categoryName: "8500\tOmzet verkopen "
     correctAmount: 0
     isDebit: 1

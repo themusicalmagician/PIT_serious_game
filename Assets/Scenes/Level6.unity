@@ -26152,7 +26152,6 @@ MonoBehaviour:
   - {fileID: 1968182886572730263, guid: 22c064d5ed0c70642bede847bdb762df, type: 3}
   - {fileID: 5511543012315972022, guid: 186fefe406bc0ce4a9f6704bcb073e34, type: 3}
   - {fileID: 4046317347531740753, guid: 8a79ddd42d7244049bfed61c332335db, type: 3}
-  - {fileID: 7154451756977089031, guid: 79d4260eb022fa34786e5b11d103161a, type: 3}
   categoryDropdowns:
   - {fileID: 1349032353}
   - {fileID: 481957424}
@@ -26173,7 +26172,7 @@ MonoBehaviour:
   scoreText: {fileID: 2037161727}
   currentDocument: {fileID: 0}
   maxScore: 3
-  failSafe: 1
+  failSafe: 0
   wrongScreen: {fileID: 740004025}
   rightAnswerScreen: {fileID: 1058661925}
   errorScreen: {fileID: 161225671}

@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEditor;
-
-
+using System.Linq;
 
 [CustomEditor(typeof(JournaalSpawner))]
 public class JournaalSpawnerInspector : Editor
 {
     public override void OnInspectorGUI()
     {
-          base.OnInspectorGUI();
+        base.OnInspectorGUI();
 
         JournaalSpawner spawner = (JournaalSpawner)target;
 
@@ -27,8 +26,13 @@ public class JournaalSpawnerInspector : Editor
                 EditorGUILayout.Space();
                 EditorGUILayout.LabelField("Categories:");
 
-                // Display categories, their correct amounts, and whether they are debit or credit
-                foreach (var category in dataHolder.documentData.categories)
+                // Filter and sort categories based on non-zero correct amounts
+                var relevantCategories = dataHolder.documentData.categories
+                    .Where(category => category.correctAmount != 0f)
+                    .OrderByDescending(category => Mathf.Abs(category.correctAmount));
+
+                // Display relevant categories, their correct amounts, and whether they are debit or credit
+                foreach (var category in relevantCategories)
                 {
                     string debitCredit = category.isDebit ? " (Debit)" : " (Credit)";
                     EditorGUILayout.LabelField($"- {category.categoryName}: {category.correctAmount}{debitCredit}");

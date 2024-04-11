@@ -22,6 +22,9 @@ public class JournaalSpawner : MonoBehaviour
     public GameObject errorScreen;
     public GameObject enlargedImagePanel; // Reference to the panel for displaying the enlarged image
     public Image enlargedImage; // Reference to the Image component for displaying the enlarged image
+    public List<TextMeshProUGUI> creditToggles; // List of TextMeshPro objects to toggle
+    private GameObject lastSpawnedDocument; // Variable to store the last spawned document
+
 
     private void Start()
     {
@@ -55,7 +58,15 @@ public class JournaalSpawner : MonoBehaviour
             Destroy(currentDocument);
         }
 
-        GameObject selectedPrefab = documentPrefabs[Random.Range(0, documentPrefabs.Length)];
+        GameObject selectedPrefab;
+
+        do
+        {
+            selectedPrefab = documentPrefabs[Random.Range(0, documentPrefabs.Length)];
+        }
+        while (selectedPrefab == lastSpawnedDocument); // Ensure the selected document is different from the last one
+
+        lastSpawnedDocument = selectedPrefab; // Update the last spawned document
 
         currentDocument = Instantiate(selectedPrefab, transform.position, Quaternion.identity);
 
@@ -68,6 +79,8 @@ public class JournaalSpawner : MonoBehaviour
                 imageDisplay.sprite = dataHolder.documentImage.sprite;
             }
         }
+
+        PopulateDropdowns();
     }
 
     public void CheckDocument()
@@ -96,12 +109,32 @@ public class JournaalSpawner : MonoBehaviour
                     }
                     else
                     {
+                        // Ensure the index is within bounds of the categoryDropdowns array
+                        if (i < categoryDropdowns.Length)
+                        {
+                            int selectedCategoryIndex = categoryDropdowns[i].value;
+                            string selectedCategoryName = categoryDropdowns[i].options[selectedCategoryIndex].text;
+                            if (selectedCategoryName != dataHolder.documentData.categories[i].categoryName)
+                            {
+                                Debug.LogError("Incorrect category selected. Please choose the correct category.");
+                                ShowWrongScreen();
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogError("Dropdown array index out of bounds.");
+                            return;
+                        }
+
                         if (!float.TryParse(creditAmountInputs[i].text, out enteredAmount))
                         {
                             Debug.LogError("Invalid input format for credit amount. Please enter a valid numeric value.");
                             ShowErrorScreen();
                             return;
                         }
+                        // Toggle the corresponding credit toggle
+                        ToggleCreditToggle(i, true);
                     }
 
                     if (enteredAmount != dataHolder.documentData.categories[i].correctAmount)
@@ -123,6 +156,8 @@ public class JournaalSpawner : MonoBehaviour
                 else
                 {
                     ShowRightAnswerScreen();
+                    SpawnDocument();
+                    Debug.Log("New document spawned!");
                 }
             }
             else
@@ -156,7 +191,7 @@ public class JournaalSpawner : MonoBehaviour
     public void ShowErrorScreen()
     {
         errorScreen.SetActive(true);
-        
+
     }
 
     public void HideErrorScreen()
@@ -198,5 +233,12 @@ public class JournaalSpawner : MonoBehaviour
         enlargedImagePanel.SetActive(false);
     }
 
-  
+    // Method to toggle the credit toggle at the specified index
+    private void ToggleCreditToggle(int index, bool value)
+    {
+        if (index >= 0 && index < creditToggles.Count)
+        {
+            creditToggles[index].gameObject.SetActive(value);
+        }
+    }
 }

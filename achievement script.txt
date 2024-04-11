@@ -1,0 +1,12 @@
+
+
+[SerializeField] private AudioManager audioManager; // Reference to AudioManager
+[SerializeField] private AchievementManager am;
+
+am.EarnAchievement("Level 1 behaald");
+am.PlaySound();
+
+audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+am = GameObject.FindGameObjectWithTag("AchievementManager");
+
+

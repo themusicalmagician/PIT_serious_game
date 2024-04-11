@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ButtonCommands : MonoBehaviour
 {
     public GameObject introObject;
     public JournaalSpawner DocCheck;
+   
 
     void Start()
     {
@@ -23,4 +25,5 @@ public class ButtonCommands : MonoBehaviour
         //GameObject currentDocument = DocCheck.GetCurrentDocument(); // Implement a method to get the current document
         //DocCheck.CheckDocument(currentDocument);
     }
+
 }

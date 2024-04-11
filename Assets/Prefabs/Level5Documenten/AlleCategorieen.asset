@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965217dd79aed804c9c61093d32ef500, type: 3}
+  m_Name: AlleCategorieen
+  m_EditorClassIdentifier: 
+  categories:
+  - categoryName: "0300\tGebouwen "
+  - categoryName: "0310\tAfschrijving gebouwen "
+  - categoryName: "0400\tInventaris "
+  - categoryName: "0410\tAfschrijving inventaris "
+  - categoryName: "0420\tVervoermiddelen "
+  - categoryName: "0430\tAfschrijving vervoermiddelen "
+  - categoryName: "0440\tKantoorinventaris "
+  - categoryName: "0450\tAfschrijving kantoorinventaris "
+  - categoryName: "0700\tEigen vermogen "
+  - categoryName: "0930\t4,2% Hypothecaire lening "
+  - categoryName: "0990\t5% Lening o/g "
+  - categoryName: "1000\tKas "
+  - categoryName: "1100\tBank  "
+  - categoryName: "1300\tDebiteuren "
+  - categoryName: "1600\tCrediteuren\t"
+  - categoryName: "1800\tTe betalen btw-laag "
+  - categoryName: "1810\tTe betalen BTW hoog "
+  - categoryName: "1820\tTe vorderen btw-laag "
+  - categoryName: "1830\tTe vorderen btw-hoog\t "
+  - categoryName: "1860\tBtw priv\xE9-gebruik "
+  - categoryName: "1890\tAf te dragen btw "
+  - categoryName: "4100\tAfschrijvingskosten gebouwen "
+  - categoryName: "4110\tAfschrijvingskosten machines en installaties "
+  - categoryName: "4120\tAfschrijvingskosten transport en vervoermiddelen "
+  - categoryName: "4130\tAfschrijvingskosten bedrijfsinventaris "
+  - categoryName: "4500\tHuisvestingskosten "
+  - categoryName: "4520\tKantoorkosten "
+  - categoryName: "4530\tAutokosten "
+  - categoryName: "4540\tVerkoopkosten "
+  - categoryName: "4550\tAlgemene kosten "
+  - categoryName: "4560\tBankkosten "
+  - categoryName: "7000\tVoorraad "
+  - categoryName: "8000\tKostprijs "
+  - categoryName: "8500\tOmzet verkopen "
+  - categoryName: "9110\tRentelasten "
+  - categoryName: "9200\tVoorraadverschillen "
+  - categoryName: "9210\tKasverschillen "
+  - categoryName: "9400\tOntvangen kortingen "

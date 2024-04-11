@@ -9,34 +9,95 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965217dd79aed804c9c61093d32ef500, type: 3}
-  m_Name: Categories
+  m_Script: {fileID: 11500000, guid: b2f29043da257014880d260a783db9c7, type: 3}
+  m_Name: IKF7
   m_EditorClassIdentifier: 
+  totalAmount: 0
+  debitAmount: 0
+  creditAmount: 0
   categories:
   - categoryName: "0300\tGebouwen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0310\tAfschrijving gebouwen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0400\tInventaris "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0410\tAfschrijving inventaris "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0420\tVervoermiddelen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0430\tAfschrijving vervoermiddelen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0440\tKantoorinventaris "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0450\tAfschrijving kantoorinventaris "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0700\tEigen vermogen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0930\t4,2% Hypothecaire lening "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0990\t5% Lening o/g "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1000\tKas "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1100\tBank  "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1300\tDebiteuren "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1600\tCrediteuren\t"
+    correctAmount: 5251.4
+    isDebit: 0
   - categoryName: "1800\tTe betalen btw-laag "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1810\tTe betalen BTW hoog "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1820\tTe vorderen btw-laag "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1830\tTe vorderen btw-hoog\t "
+    correctAmount: 911.4
+    isDebit: 1
   - categoryName: "1860\tBtw priv\xE9-gebruik "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "1890\tAf te dragen btw "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "7000\tVoorraad "
+    correctAmount: 4340
+    isDebit: 1
   - categoryName: "8500\tOmzet verkopen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "8000\tKostprijs "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "9200\tVoorraadverschillen "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "0430\tAfschrijving "
+    correctAmount: 0
+    isDebit: 1
   - categoryName: "4550\tAlgemene kosten "
+    correctAmount: 0
+    isDebit: 1
+  - categoryName: "4550\tAlgemene kosten "
+    correctAmount: 0
+    isDebit: 1
+  categoriesData: {fileID: 11400000, guid: 98f82803d603a0140a6cbb41f371be77, type: 2}
