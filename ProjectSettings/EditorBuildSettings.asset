@@ -28,7 +28,10 @@ EditorBuildSettings:
     guid: 8c545ab0d2071a947a83a347e1f187b7
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
-    guid: 4b5581508bc5fc54e8e1ecb1c527c32d
+    guid: e37bc42616f940c4f8368cdfff3994ea
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 8f6674a01e5f02744923ab1efa1579bf
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 5a8de9b9c10b79b46afe61cb73611b51
@@ -38,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AchievementMenu.unity
     guid: f88920781f459e040ba990b4ac5a7f48
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: b578ac0444a90cc459d0777f16ececa0
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: afed083f8140fb94cb8dbabe889f05c1
   m_configObjects: {}

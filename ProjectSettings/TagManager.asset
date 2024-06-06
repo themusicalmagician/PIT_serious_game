@@ -13,6 +13,11 @@ TagManager:
   - Wrong
   - ParticleL
   - ParticleR
+  - WindowTip
+  - WindowTop
+  - AudioManager
+  - AchievementManager
+  - DocumentCheck
   layers:
   - Default
   - TransparentFX
