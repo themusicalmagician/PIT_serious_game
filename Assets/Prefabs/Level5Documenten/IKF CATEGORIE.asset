@@ -9,23 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f29043da257014880d260a783db9c7, type: 3}
-  m_Name: IKF4DATA
+  m_Script: {fileID: 11500000, guid: 965217dd79aed804c9c61093d32ef500, type: 3}
+  m_Name: IKF CATEGORIE
   m_EditorClassIdentifier: 
-  totalAmount: 4743.2
-  debitAmount: 4743.2
-  creditAmount: 4743.2
   categories:
   - categoryName: 7000 voorraad
-    correctAmount: 3920
-    isDebit: 1
   - categoryName: 1830 Te vorderen BTW hoog
-    correctAmount: 823.2
-    isDebit: 1
   - categoryName: 1600 Crediteuren
-    correctAmount: 4743.2
-    isDebit: 0
   - categoryName: "1820 \t Te vorderen btw-laag"
-    correctAmount: 0
-    isDebit: 1
-  categoriesData: {fileID: 11400000, guid: 819df96adcc06c7429b27c8f12807a14, type: 2}

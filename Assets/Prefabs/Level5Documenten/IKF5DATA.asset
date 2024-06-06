@@ -16,19 +16,16 @@ MonoBehaviour:
   debitAmount: 6485.6
   creditAmount: 6485.6
   categories:
-  - categoryName: "7000\tVoorraad "
+  - categoryName: 7000 voorraad
     correctAmount: 5360
     isDebit: 1
-  - categoryName: "1830\tTe vorderen btw-hoog\t "
+  - categoryName: 1830 Te vorderen BTW hoog
     correctAmount: 1125.6
     isDebit: 1
-  - categoryName: "1600\tCrediteuren\t"
+  - categoryName: 1600 Crediteuren
     correctAmount: 6485.6
     isDebit: 0
-  - categoryName: "8500\tOmzet verkopen "
+  - categoryName: "1820 \t Te vorderen btw-laag"
     correctAmount: 0
     isDebit: 1
-  - categoryName: "8000\tKostprijs "
-    correctAmount: 0
-    isDebit: 1
-  categoriesData: {fileID: 11400000, guid: 98f82803d603a0140a6cbb41f371be77, type: 2}
+  categoriesData: {fileID: 11400000, guid: 819df96adcc06c7429b27c8f12807a14, type: 2}

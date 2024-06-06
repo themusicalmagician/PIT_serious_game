@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2f29043da257014880d260a783db9c7, type: 3}
-  m_Name: IKF4DATA
+  m_Name: IKF6DATA
   m_EditorClassIdentifier: 
-  totalAmount: 4743.2
-  debitAmount: 4743.2
-  creditAmount: 4743.2
+  totalAmount: 3448.5
+  debitAmount: 3448.5
+  creditAmount: 3448.5
   categories:
   - categoryName: 7000 voorraad
-    correctAmount: 3920
+    correctAmount: 2850
     isDebit: 1
   - categoryName: 1830 Te vorderen BTW hoog
-    correctAmount: 823.2
+    correctAmount: 598.5
     isDebit: 1
   - categoryName: 1600 Crediteuren
-    correctAmount: 4743.2
+    correctAmount: 3448.5
     isDebit: 0
   - categoryName: "1820 \t Te vorderen btw-laag"
     correctAmount: 0
